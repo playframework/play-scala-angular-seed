@@ -1,4 +1,4 @@
-name := """play-scala-starter-example"""
+name := """scala-play-angular-seed"""
 
 version := "1.0-SNAPSHOT"
 

@@ -1,8 +1,8 @@
 [<img src="https://img.shields.io/travis/playframework/play-scala-starter-example.svg"/>](https://travis-ci.org/playframework/play-scala-starter-example)
 
-# play-scala-starter-example
+# scala-play-angular-seed
 
-This is a starter application that shows how Play works.  Please see the documentation at https://www.playframework.com/documentation/latest/Home for more details.
+> Scala Play 2.6.x + Angular 5 with Angular CLI seed project with full-fledged build process.
 
 ## Running
 
