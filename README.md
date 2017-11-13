@@ -34,7 +34,22 @@
     sbt dist            # Build both backend and frontend sources into a single distribution
     
     sbt test            # Run both backend and frontend unit tests 
+```  
+## Routes
+
 ```
+├── /conf/      
+│     ├── routes 
+```
+
+* The following route configuration allows to map front end index.html to index route. This should be placed as the first route in this file.
+
+```
+GET        /             controllers.Assets.at(path="/public/ui", file="index.html")
+```
+
+**Note: _On production build all the front end Angular build artifacts will be copied to the `public/ui` folder._**
+
 
 ## License
 
