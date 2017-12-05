@@ -4,6 +4,8 @@
 
 > scala-play-angular-seed project illustrates how Play Framework can be used to develop backend/services along with Angular to develop the front-end/ui.
 
+Read more @ http://bit.ly/2AStvhK
+
 ## Used Versions
 
 * [Play Framework: 2.6.7](https://www.playframework.com/documentation/2.6.x/Home)
