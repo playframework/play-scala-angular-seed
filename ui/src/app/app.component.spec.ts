@@ -1,7 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
-import { HttpClientModule } from '@angular/common/http';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
@@ -20,7 +23,8 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        HttpClientModule
+        HttpClientModule,
+        RouterTestingModule
       ]
     }).overrideComponent(AppComponent, {
       set: {
