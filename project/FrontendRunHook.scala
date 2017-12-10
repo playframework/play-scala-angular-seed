@@ -6,17 +6,32 @@ import sbt._
 import scala.sys.process.Process
 
 /**
-  * Angular build play run hook.
+  * Frontend build commands.
+  * Change these if you are using some other package manager. i.e: Yarn
+  */
+object FrontendCommands {
+  val dependencyInstall: String = "npm install"
+  val test: String = "npm run test-no-watch"
+  val devServe: String = "npm run start"
+  val devBuild: String = "npm run build-dev"
+  val prodBuild: String = "npm run build-prod"
+}
+
+/**
+  * Frontend build play run hook.
   * https://www.playframework.com/documentation/2.6.x/SBTCookbook
   */
-object AngularBuild {
+object FrontendRunHook {
   def apply(base: File): PlayRunHook = {
     object UIBuildHook extends PlayRunHook {
 
       var process: Option[Process] = None
 
-      var npmInstall: String = "npm install"
-      var npmRun: String = "npm run start"
+      /**
+        * Change these commands if you want to use Yarn.
+        */
+      var npmInstall: String = FrontendCommands.dependencyInstall
+      var npmRun: String = FrontendCommands.devServe
 
       // Windows requires npm commands prefixed with cmd /c
       if (System.getProperty("os.name").toLowerCase().contains("win")){

@@ -12,7 +12,7 @@ val Error = 1
 
 // Run angular serve task when Play runs in dev mode, that is, when using 'sbt run'
 // https://www.playframework.com/documentation/2.6.x/SBTCookbook
-PlayKeys.playRunHooks += baseDirectory.map(AngularBuild.apply).value
+PlayKeys.playRunHooks += baseDirectory.map(FrontendRunHook.apply).value
 
 // True if build running operating system is windows.
 val isWindows = System.getProperty("os.name").toLowerCase().contains("win")
@@ -26,7 +26,7 @@ def isNodeModulesInstalled(implicit dir: File): Boolean = (dir / "node_modules")
 
 // Execute `npm install` command to install all node module dependencies. Return Success if already installed.
 def runNpmInstall(implicit dir: File): Int =
-  if (isNodeModulesInstalled) Success else runOnCommandline("npm install")
+  if (isNodeModulesInstalled) Success else runOnCommandline(FrontendCommands.dependencyInstall)
 
 // Execute task if node modules are installed, else return Error status.
 def ifNodeModulesInstalled(task: => Int)(implicit dir: File): Int =
@@ -34,13 +34,13 @@ def ifNodeModulesInstalled(task: => Int)(implicit dir: File): Int =
   else Error
 
 // Execute frontend dev build task. Update to change the frontend dev build task.
-def executeDevBuild(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline("npm run build-dev"))
+def executeDevBuild(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline(FrontendCommands.devBuild))
 
 // Execute frontend test task. Update to change the frontend test task.
-def executeUiTests(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline("npm run test-no-watch"))
+def executeUiTests(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline(FrontendCommands.test))
 
 // Execute frontend prod build task. Update to change the frontend prod build task.
-def executeProdBuild(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline("npm run build-prod"))
+def executeProdBuild(implicit dir: File): Int = ifNodeModulesInstalled(runOnCommandline(FrontendCommands.prodBuild))
 
 
 // Create frontend build tasks for prod, dev and test execution.
