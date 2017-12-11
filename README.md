@@ -12,11 +12,7 @@ Read more @ http://bit.ly/2AStvhK
 * [Angular: 5.0.0](https://angular.io/)
 * [Angular CLI: 1.5.0](https://cli.angular.io/)
 
-## How to use it? 
-
-### Prerequisites
-
-* This assumes that you have [npm](https://npmjs.org/) installed.
+## How to use it?
 
 ### Let's get started,
 
@@ -41,53 +37,63 @@ Read more @ http://bit.ly/2AStvhK
 ## Complete Directory Layout
 
 ```
-├── /app/                       # The backend (scala) application sources (controllers, models, views, assets)
-├── /conf/                      # Configurations files and other non-compiled resources (on classpath)
-│     ├── application.conf      # Builds the project from source to output(lib and bower) folder
-│     ├── logback.xml           # Logging configuration
-│     └── routes                # Routes definition
-├── /logs/                      # Logs folder
-│     └── application.log       # Default log file
-├── /project/                   # Sbt configuration files
-│     ├── AngularBuild.scala    # PlayRunHook file to trigger angular serve with sbt run
-│     ├── build.properties      # Marker for sbt project
-│     └── plugins.sbt           # Sbt plugins declaration
-├── /public/                    # Public assets
-│     └── /ui/                  # Frontend build assests
-├── /target/                    # Generated stuff
-│     ├── /universal/           # Application packaging
-│     └── /web/                 # Compiled web assets
-├── /test/                      # Contains unit tests for scala play sources
-├── /ui/                        # Angular front end sources
-│     ├── /e2e/                 # End to end tests folder
-│     ├── /node_modules/        # 3rd-party frontend libraries and utilities
-│     ├── /src/                 # The frontend source code (modules, componensts, models, directives, services etc.) of the application
-│     ├── .angular-cli.json     # Builds the project from source to output(lib and bower) folder
-│     ├── .editorconfig         # Define and maintain consistent coding styles between different editors and IDEs
-│     ├── .gitignore            # Contains ui files to be ignored when pushing to git
-│     ├── karma.conf.js         # Karma configuration file
-│     ├── package.json          # Holds various metadata configuration relevant to the ui
-│     ├── protractor.conf.js    # Protractor configuration file
-│     ├── proxy.conf.json       # UI proxy configuration
-│     ├── README.md             # Contains all user guide details for the ui
-│     ├── tsconfig.json         # Contains typescript compiler options
-│     └── tslint.json           # Lint rules for the ui
-├── .gitignore                  # Contains files to be ignored when pushing to git
-├── build.sbt                   # Play application build script
-├── LICENSE                     # Contains License Agreement file
-├── README.md                   # Contains all user guide details for the application
-└── ui-build.sbt                # UI build scripts
+├── /app/                           # The backend (scala) application sources (controllers, models, views, assets)
+├── /conf/                          # Configurations files and other non-compiled resources (on classpath)
+│     ├── application.conf          # Builds the project from source to output(lib and bower) folder
+│     ├── logback.xml               # Logging configuration
+│     └── routes                    # Routes definition
+├── /logs/                          # Logs folder
+│     └── application.log           # Default log file
+├── /project/                       # Sbt configuration files
+│     ├── FrontendCommands.scala    # Frontend build commands
+│     ├── FrontendRunHook.scala     # Frontend build play run hook
+│     ├── build.properties          # Marker for sbt project
+│     └── plugins.sbt               # Sbt plugins declaration
+├── /public/                        # Public assets
+│     └── /ui/                      # Frontend build assests
+├── /target/                        # Generated stuff
+│     ├── /universal/               # Application packaging
+│     └── /web/                     # Compiled web assets
+├── /test/                          # Contains unit tests for scala play sources
+├── /ui/                            # Angular front end sources
+│     ├── /e2e/                     # End to end tests folder
+│     ├── /node_modules/            # 3rd-party frontend libraries and utilities
+│     ├── /src/                     # The frontend source code (modules, componensts, models, directives, services etc.) of the application
+│     ├── .angular-cli.json         # Builds the project from source to output(lib and bower) folder
+│     ├── .editorconfig             # Define and maintain consistent coding styles between different editors and IDEs
+│     ├── .gitignore                # Contains ui files to be ignored when pushing to git
+│     ├── karma.conf.js             # Karma configuration file
+│     ├── package.json              # Holds various metadata configuration relevant to the ui
+│     ├── protractor.conf.js        # Protractor configuration file
+│     ├── proxy.conf.json           # UI proxy configuration
+│     ├── README.md                 # Contains all user guide details for the ui
+│     ├── tsconfig.json             # Contains typescript compiler options
+│     └── tslint.json               # Lint rules for the ui
+├── .gitignore                      # Contains files to be ignored when pushing to git
+├── build.sbt                       # Play application build script
+├── LICENSE                         # Contains License Agreement file
+├── README.md                       # Contains all user guide details for the application
+└── ui-build.sbt                    # UI build scripts
 ```
 
 ## What is new in here?
 
-### AngularBuild.scala
+### FrontendCommands.scala
+
+* Represents available frontend build commands.
+
+```
+    ├── /project/
+    │     ├── FrontendCommands.scala
+```
+
+### FrontendRunHook.scala
 
 * Represents PlayRunHook scala implementation to trigger angular serve with sbt run command.
 
 ```
     ├── /project/
-    │     ├── AngularBuild.scala
+    │     ├── FrontendRunHook.scala
 ```
 
 ### ui-build.sbt
