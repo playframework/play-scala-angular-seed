@@ -10,7 +10,7 @@ Read more @ http://bit.ly/2AStvhK
 
 * [Play Framework: 2.6.7](https://www.playframework.com/documentation/2.6.x/Home)
 * [Angular: 5.0.0](https://angular.io/)
-* [Angular CLI: 1.5.0](https://cli.angular.io/)
+* [Angular CLI: 1.6.0](https://cli.angular.io/)
 
 ## How to use it?
 
