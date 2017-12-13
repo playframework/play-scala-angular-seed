@@ -19,7 +19,7 @@ object FrontendRunHook {
         * Change these commands if you want to use Yarn.
         */
       var npmInstall: String = FrontendCommands.dependencyInstall
-      var npmRun: String = FrontendCommands.devServe
+      var npmRun: String = FrontendCommands.serve
 
       // Windows requires npm commands prefixed with cmd /c
       if (System.getProperty("os.name").toLowerCase().contains("win")){
