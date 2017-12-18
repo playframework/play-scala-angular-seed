@@ -1,6 +1,6 @@
 [![MIT License][license-badge]][LICENSE]
 
-# scala-play-angular-seed
+# Scala Play Angular Seed
 
 > scala-play-angular-seed project illustrates how Play Framework can be used to develop backend/services along with Angular to develop the front-end/ui.
 
