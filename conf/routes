@@ -8,5 +8,5 @@ GET     /                           controllers.Assets.at(path="/public", file="
 # An example route
 GET     /summary                    controllers.HomeController.appSummary
 
-# Map static resources from the /public folder to asset rosource path
+# Map static resources from the /public folder to the file rosource path
 GET     /*file                      controllers.Assets.at(path="/public", file)
