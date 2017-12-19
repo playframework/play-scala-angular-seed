@@ -10,8 +10,8 @@
     "e2e": "ng e2e",
     "start": "ng serve --open --proxy-config proxy.conf.json --host 0.0.0.0",
     "test-no-watch": "ng test --single-run",
-    "build-dev": "ng build --progress --output-path ../public/ui",
-    "build-prod": "ng build --extract-css --progress --prod --aot --output-path ../public/ui"
+    "build-dev": "ng build --progress --output-path ../public",
+    "build-prod": "ng build --extract-css --progress --prod --aot --output-path ../public"
   },
   "private": true,
   "dependencies": {
