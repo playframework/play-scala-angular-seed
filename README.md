@@ -134,6 +134,19 @@ GET        /             controllers.Assets.at(path="/public/ui", file="index.ht
 
 **Note: _On production build all the front end Angular build artifacts will be copied to the `public/ui` folder._**
 
+## Can be used to implement any front end/ui build!
+
+* Simply replace the ui directory with the build of your choice
+* Make output directory ROOT/public/
+* Implement a proxy to localhost:9000
+
+## Looking for some other frontend framework or language choice
+
+* [Java Play Angular Seed](https://github.com/yohangz/java-play-angular-seed)
+* [Scala Play React Seed](https://github.com/yohangz/scala-play-react-seed)
+* [Java Play React Seed](https://github.com/yohangz/java-play-react-seed)
+* [Scala Play Vuejs Seed](https://github.com/duncannevin/scala-play-vue-seed) by [Duncan Nevin](https://github.com/duncannevin)
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
