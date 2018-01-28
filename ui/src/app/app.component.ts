@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 export class AppComponent {
   title: string;
 
-  constructor (private appService: AppService) {
+  constructor(private appService: AppService) {
     this.appService.getWelcomeMessage().subscribe((data: any) => {
       this.title = data.content;
     });
