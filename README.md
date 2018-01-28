@@ -6,11 +6,13 @@
 
 Read more @ http://bit.ly/2AStvhK
 
+[![Scala Play Angular Seed](https://github.com/yohangz/scala-play-angular-seed/blob/master/angular.png)](http://bit.ly/2AStvhK)
+
 ## Used Versions
 
 * [Play Framework: 2.6.7](https://www.playframework.com/documentation/2.6.x/Home)
-* [Angular: 5.0.0](https://angular.io/)
-* [Angular CLI: 1.6.0](https://cli.angular.io/)
+* [Angular: 5.2.0](https://angular.io/)
+* [Angular CLI: 1.6.6](https://cli.angular.io/)
 
 ## How to use it?
 
