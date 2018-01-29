@@ -6,7 +6,8 @@
 GET     /                           controllers.FrontendController.index()
 
 # An example route
-GET     /summary                    controllers.HomeController.appSummary
+# Use the prefix defined in application.conf for all API routes
+GET     /api/summary                controllers.HomeController.appSummary
 
 # Map static resources from the /public folder to the file rosource path
-GET     /*file                       controllers.FrontendController.assetOrDefault(file)
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
