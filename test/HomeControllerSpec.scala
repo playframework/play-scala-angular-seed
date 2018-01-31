@@ -15,7 +15,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
 
   "HomeController GET" should {
 
-    "render the appSummary page from a new instance of controller" in {
+    "render the appSummary resource from a new instance of controller" in {
       val controller = new HomeController(stubControllerComponents())
       val home = controller.appSummary().apply(FakeRequest(GET, "/summary"))
 
@@ -25,7 +25,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
       resultJson.toString() mustBe """{"content":"Scala Play Angular Seed"}"""
     }
 
-    "render the appSummary page from the application" in {
+    "render the appSummary resource from the application" in {
       val controller = inject[HomeController]
       val home = controller.appSummary().apply(FakeRequest(GET, "/summary"))
 
@@ -35,8 +35,8 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
       resultJson.toString() mustBe """{"content":"Scala Play Angular Seed"}"""
     }
 
-    "render the appSummary page from the router" in {
-      val request = FakeRequest(GET, "/summary")
+    "render the appSummary resource from the router" in {
+      val request = FakeRequest(GET, "/api/summary")
       val home = route(app, request).get
 
       status(home) mustBe OK
