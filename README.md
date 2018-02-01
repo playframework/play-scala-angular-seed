@@ -132,7 +132,7 @@ Read more @ http://bit.ly/2AStvhK
 
 ### proxy.conf.json
 
-* Contains proxy configurations required to run application in watch mode along with both `Scala` and `Angular` builds.
+* Used to proxy play backend API when running the project on watch mode.
 
 ```
 ├── /ui/
