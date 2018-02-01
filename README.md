@@ -2,13 +2,13 @@
 
 # Scala Play Angular Seed
 
-> scala-play-angular-seed project illustrates how Play Framework can be used to develop backend/services along with Angular to develop the front-end/ui.
+> Use play framework to develop the web application backend/services and frontend using Angular CLI, all in a totally integrated workflow and single unified console. This approach will deliver perfect development experience without CORS hassle. 
 
 Read more @ http://bit.ly/2AStvhK
 
 [![Scala Play Angular Seed](https://github.com/yohangz/scala-play-angular-seed/blob/master/angular.png)](http://bit.ly/2AStvhK)
 
-## Used Versions
+## Used Summary
 
 * [Play Framework: 2.6.7](https://www.playframework.com/documentation/2.6.x/Home)
 * [Angular: 5.2.0](https://angular.io/)
@@ -16,98 +16,114 @@ Read more @ http://bit.ly/2AStvhK
 
 ## How to use it?
 
+### Prerequisites
+
+* [Node.js](https://nodejs.org/)
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [scala](https://www.scala-lang.org/download/)
+
 ### Let's get started,
 
-* Clone the application and open application as a sbt project.
+* Fork or clone this repository.
 
-* This application is not using any of the scala play views and all the views are served by the [Angular](https://angular.io/) code base which is inside the `ui` folder.
+* Used any of the following [SBT](http://www.scala-sbt.org/) commands which will intern trigger frontend associated npm scripts.
 
-* Used any of the sbt commands listed in the below according to the requirement which are working fine with this application.(To see more details of [sbt](http://www.scala-sbt.org/))
+```
+    sbt clean           # Clean existing build artifacts
 
-``` 
-    sbt clean           # Clear existing build files
-    
     sbt stage           # Build your application from your project’s source directory
-    
+
     sbt run             # Run both backend and frontend builds in watch mode
-    
-    sbt dist            # Build both backend and frontend sources into a single distribution
-    
-    sbt test            # Run both backend and frontend unit tests 
-```  
+
+    sbt dist            # Build both backend and frontend sources into a single distribution artifact
+
+    sbt test            # Run both backend and frontend unit tests
+```
+
+* This seed is not using [scala play views](https://www.playframework.com/documentation/2.6.x/ScalaTemplates). All the views and frontend associated routes are served via [React](https://reactjs.org/) code base under `ui` directory.
 
 ## Complete Directory Layout
 
 ```
-├── /app/                                 # The backend (java) application sources (controllers, models, views, assets)
-│     └── /controllers/                   # Contains backend controller files
-│           └── FrontendController.scala  # Frontend controller managing all static resource associate routes
+├── /app/                                 # The backend source (controllers, models, services)
+│     └── /controllers/                   # Backend controllers
+│           └── FrontendController.scala  # Asset controller wrapper serving frontend assets and artifacts
 ├── /conf/                                # Configurations files and other non-compiled resources (on classpath)
-│     ├── application.conf                # Builds the project from source to output(lib and bower) folder
+│     ├── application.conf                # Play application configuratiion file.
 │     ├── logback.xml                     # Logging configuration
-│     └── routes                          # Routes definition
-├── /logs/                                # Logs folder
-│     └── application.log                 # Default log file
-├── /project/                             # Sbt configuration files
-│     ├── FrontendCommands.scala          # Frontend build commands
+│     └── routes                          # Routes definition file
+├── /logs/                                # Log directory
+│     └── application.log                 # Application log file
+├── /project/                             # Contains project build configuration and plugins
+│     ├── FrontendCommands.scala          # Frontend build command mapping configuration
 │     ├── FrontendRunHook.scala           # Forntend build PlayRunHook (trigger frontend serve on sbt run)
-│     ├── build.properties                # Marker for sbt project 
-│     └── plugins.sbt                     # Sbt plugins declaration
+│     ├── build.properties                # Marker for sbt project
+│     └── plugins.sbt                     # SBT plugins declaration
 ├── /public/                              # Frontend build artifacts will be copied to this directory
-├── /target/                              # Generated stuff
+├── /target/                              # Play project build artifact directory
 │     ├── /universal/                     # Application packaging
 │     └── /web/                           # Compiled web assets
-├── /test/                                # Contains unit tests for java play sources
-├── /ui/                                  # Angular front end sources
-│     ├── /e2e/                           # End to end tests folder
+├── /test/                                # Contains unit tests of backend sources
+├── /ui/                                  # React frontend source (based on Create React App)
+│     ├── /e2e/                           # End to end test directory
 │     ├── /node_modules/                  # 3rd-party frontend libraries and utilities
 │     ├── /src/                           # The frontend source code (modules, componensts, models, directives, services etc.) of the application
-│     ├── .angular-cli.json               # Builds the project from source to output(lib and bower) folder
+│     ├── .angular-cli.json               # Angular cli configuration
 │     ├── .editorconfig                   # Define and maintain consistent coding styles between different editors and IDEs
-│     ├── .gitignore                      # Contains ui files to be ignored when pushing to git
+│     ├── .gitignore                      # Contains files to be ignored under ui directory when pushing to git
 │     ├── karma.conf.js                   # Karma configuration file
-│     ├── package.json                    # Holds various metadata configuration relevant to the ui
+│     ├── package.json                    # NPM configuration of frontend source
 │     ├── protractor.conf.js              # Protractor configuration file
 │     ├── proxy.conf.json                 # UI proxy configuration
-│     ├── README.md                       # Contains all user guide details for the ui
-│     ├── tsconfig.json                   # Contains typescript compiler options
+│     ├── README.md                       # Contains all user guide details of the ui
+│     ├── tsconfig.json                   # Contains typescript compiler options and configuration
 │     └── tslint.json                     # Lint rules for the ui
 ├── .gitignore                            # Contains files to be ignored when pushing to git
-├── build.sbt                             # Play application build script
-├── LICENSE                               # Contains License Agreement file
-├── README.md                             # Contains all user guide details for the application
-└── ui-build.sbt                          # Associated frontend build scripts with sbt
+├── build.sbt                             # Play application SBT configuration
+├── LICENSE                               # License Agreement file
+├── README.md                             # Application user guide
+└── ui-build.sbt                          # SBT command hooks associated with frontend npm scripts 
 ```
 
 ## What is new in here?
 
 ### FrontendCommands.scala
 
-* Represents available frontend build commands.
+* Frontend build command mapping configuration.
 
 ```
     ├── /project/
     │     ├── FrontendCommands.scala
 ```
 
+
 ### FrontendRunHook.scala
 
-* Represents PlayRunHook scala implementation to trigger angular serve with sbt run command.
+* PlayRunHook implementation to trigger ``npm run start`` on ``sbt run``.
 
 ```
     ├── /project/
     │     ├── FrontendRunHook.scala
 ```
 
+### FrontendController.scala
+
+* Asset controller wrapper serving frontend assets and artifacts.
+
+```
+    ├── /app/                                 
+    │     └── /controllers/                   
+    │           └── FrontendController.scala
+```
+
 ### ui-build.sbt
 
-* `ui-build.sbt` file to represent UI builds scrips implementations to run along with the available sbt commands.
-* This file is located in the root level of the project to work smoothly with the `build.sbt` file.
+* This file contains the build task hooks to trigger frontend npm scripts on sbt command execution.
 
-### npm run commands
+### npm scripts
 
-* Added several new npm run commands in the `scripts` section of the package.json file in order to work smoothly with the sbt commands.
-* Check [UI README.md](./ui/README.md) to see the available front end build tasks.
+* New and modified npm scripts of [Angular: 5.2.0](https://angular.io/) generated package.json.
+* Check [UI README.md](./ui/README.md) to see all available frontend build tasks.
 
 ```
 ├── /ui/
