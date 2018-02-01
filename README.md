@@ -143,13 +143,27 @@ Read more @ http://bit.ly/2AStvhK
 
 ```
 ├── /conf/      
-│     ├── routes 
+│     ├── routes
 ```
 
-* The following route configuration allows to map front end index.html to index route. This should be placed as the first route in this file.
+* The following route configuration map index.html to entry route (root). This should be placed as the initial route.
 
 ```
-GET        /             controllers.Assets.at(path="/public/ui", file="index.html")
+GET        /             controllers.FrontendController.index()
+```
+
+* All API routes should be prefixed with API prefix defined under ``application.conf`` (Default prefix ``apiPrefix = "api"``) 
+
+Example API route:
+
+```
+GET        /api/summary  controllers.HomeController.appSummary
+```
+
+* The following route is being used to serve frontend associated build artifacts (css, js) and static assets (images, etc.). This should be placed as the final route.
+
+```
+GET        /*file        controllers.FrontendController.assetOrDefault(file)
 ```
 
 **Note: _On production build all the front end Angular build artifacts will be copied to the `public/ui` folder._**
