@@ -122,7 +122,7 @@ Read more @ http://bit.ly/2AStvhK
 
 ### npm scripts
 
-* New and modified npm scripts of [Angular](https://angular.io/) generated package.json.
+* New and modified npm scripts of [Angular CLI](https://cli.angular.io/) generated package.json.
 * Check [UI README.md](./ui/README.md) to see all available frontend build tasks.
 
 ```
