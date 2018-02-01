@@ -65,18 +65,18 @@ Read more @ http://bit.ly/2AStvhK
 │     └── /web/                           # Compiled web assets
 ├── /test/                                # Contains unit tests of backend sources
 ├── /ui/                                  # React frontend source (based on Create React App)
-│     ├── /e2e/                           # End to end test directory
+│     ├── /e2e/                           # End to end tests folder
 │     ├── /node_modules/                  # 3rd-party frontend libraries and utilities
 │     ├── /src/                           # The frontend source code (modules, componensts, models, directives, services etc.) of the application
-│     ├── .angular-cli.json               # Angular cli configuration
+│     ├── .angular-cli.json               # Builds the project from source to output(lib and bower) folder
 │     ├── .editorconfig                   # Define and maintain consistent coding styles between different editors and IDEs
-│     ├── .gitignore                      # Contains files to be ignored under ui directory when pushing to git
+│     ├── .gitignore                      # Contains ui files to be ignored when pushing to git
 │     ├── karma.conf.js                   # Karma configuration file
-│     ├── package.json                    # NPM configuration of frontend source
+│     ├── package.json                    # Holds various metadata configuration relevant to the ui
 │     ├── protractor.conf.js              # Protractor configuration file
 │     ├── proxy.conf.json                 # UI proxy configuration
-│     ├── README.md                       # Contains all user guide details of the ui
-│     ├── tsconfig.json                   # Contains typescript compiler options and configuration
+│     ├── README.md                       # Contains all user guide details for the ui
+│     ├── tsconfig.json                   # Contains typescript compiler options
 │     └── tslint.json                     # Lint rules for the ui
 ├── .gitignore                            # Contains files to be ignored when pushing to git
 ├── build.sbt                             # Play application SBT configuration
