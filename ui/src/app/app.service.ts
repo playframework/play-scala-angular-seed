@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map'
+import { map } from 'rxjs/operators';
 
 /**
  * Class representing application service.
@@ -18,7 +18,8 @@ export class AppService {
    * Makes a http get request to retrieve the welcome message from the backend service.
    */
   public getWelcomeMessage() {
-    return this.http.get(this.serviceUrl)
-      .map(response => response)
+    return this.http.get(this.serviceUrl).pipe(
+      map(response => response)
+    );
   }
 }

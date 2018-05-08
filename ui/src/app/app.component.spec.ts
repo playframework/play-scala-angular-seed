@@ -5,12 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { of } from 'rxjs';
 
 class FakeAppService extends AppService {
   getWelcomeMessage() {
-    return Observable.of({
+    return of({
       content: 'Test content'
     });
   }

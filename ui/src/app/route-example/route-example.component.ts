@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-route-example',
   templateUrl: './route-example.component.html',
@@ -10,6 +12,6 @@ export class RouteExampleComponent {
   public tech: any;
 
   constructor(route: ActivatedRoute) {
-    this.tech = route.data.map(data => data.technology);
+    this.tech = route.data.pipe(map(data => data.technology));
   }
 }
