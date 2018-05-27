@@ -68,8 +68,8 @@ Read more @ http://bit.ly/2AStvhK
 │     ├── /e2e/                           # End to end tests folder
 │     ├── /node_modules/                  # 3rd-party frontend libraries and utilities
 │     ├── /src/                           # The frontend source code (modules, componensts, models, directives, services etc.) of the application
-│     |     ├── karma.conf.js             # Karma configuration file
-│     |     └── proxy.conf.json           # UI proxy configuration      
+│     │     ├── karma.conf.js             # Karma configuration file
+│     │     └── proxy.conf.json           # UI proxy configuration      
 │     ├── .angular.json                   # Angular CLI configuration
 │     ├── .editorconfig                   # Define and maintain consistent coding styles between different editors and IDEs
 │     ├── .gitignore                      # Contains ui files to be ignored when pushing to git
