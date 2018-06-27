@@ -6,7 +6,7 @@
 
 Read more @ http://bit.ly/2AStvhK
 
-[![Scala Play Angular Seed](https://github.com/yohangz/scala-play-angular-seed/blob/master/angular.png)](http://bit.ly/2AStvhK)
+[![Scala Play Angular Seed](https://github.com/yohangz/scala-play-angular-seed/blob/master/angular.png)](http://bit.ly/2AStvhK) [![Greenkeeper badge](https://badges.greenkeeper.io/yohangz/scala-play-angular-seed.svg)](https://greenkeeper.io/)
 
 ## Used Summary
 
