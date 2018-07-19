@@ -4,14 +4,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "start": "ng serve --open --proxy-config src/proxy.conf.js --host 0.0.0.0",
-    "test-no-watch": "ng test --single-run",
-    "build-dev": "ng build --progress --output-path ../public",
-    "build-prod": "ng build --extract-css --progress --prod --aot --output-path ../public"
+    "test": "ng test --watch",
+    "test:ci": "ng test --watch=false --browsers ChromeHeadless",
+    "test:coverage": "ng test --watch=true --code-coverage=true",
+    "test:coverage:ci": "ng test --watch=false --code-coverage=true --browsers ChromeHeadless",
+    "build:dev": "ng build --progress --output-path ../public",
+    "build:prod": "ng build --progress --prod --output-path ../public"
   },
   "private": true,
   "dependencies": {
