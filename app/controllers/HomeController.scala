@@ -11,4 +11,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def appSummary = Action {
     Ok(Json.obj("content" -> "Scala Play Angular Seed"))
   }
+
+  def postTest = Action {
+    Ok(Json.obj("content" -> "Post Request Test => Data Sending Success"))
+  }
 }

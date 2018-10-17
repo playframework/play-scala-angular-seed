@@ -10,3 +10,6 @@ GET     /api/summary                controllers.HomeController.appSummary
 
 # Serve static assets under public directory
 GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+# Test post request
+POST    /api/postTest               controllers.HomeController.postTest()
