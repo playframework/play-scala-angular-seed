@@ -11,8 +11,8 @@ Read more @ http://bit.ly/2AStvhK
 ## Used Summary
 
 * [Play Framework: 2.6.13](https://www.playframework.com/documentation/2.6.x/Home)
-* [Angular: 6.0.0](https://angular.io/)
-* [Angular CLI: 1.6.6](https://cli.angular.io/)
+* [Angular: 7.1.4](https://angular.io/)
+* [Angular CLI: 7.1.4](https://cli.angular.io/)
 
 ## How to use it?
 
