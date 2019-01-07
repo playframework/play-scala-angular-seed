@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "latest-angular": {
+    "scala-play-angular-seed": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/latest-angular",
+            "outputPath": "dist/scala-play-angular-seed",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -43,25 +43,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "latest-angular:build"
+            "browserTarget": "scala-play-angular-seed:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "latest-angular:build:production"
+              "browserTarget": "scala-play-angular-seed:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "latest-angular:build"
+            "browserTarget": "scala-play-angular-seed:build"
           }
         },
         "test": {
@@ -72,7 +79,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "styles.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
@@ -95,15 +102,21 @@
         }
       }
     },
-    "latest-angular-e2e": {
+    "scala-play-angular-seed-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "latest-angular:serve"
+            "devServerTarget": "scala-play-angular-seed:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "scala-play-angular-seed:serve:production"
+            }
           }
         },
         "lint": {
@@ -118,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "latest-angular"
+  "defaultProject": "scala-play-angular-seed"
 }
