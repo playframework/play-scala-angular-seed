@@ -10,7 +10,7 @@ Read more @ http://bit.ly/2AStvhK
 
 ## Used Summary
 
-* [Play Framework: 2.6.13](https://www.playframework.com/documentation/2.6.x/Home)
+* [Play Framework: 2.7.0](https://www.playframework.com/documentation/2.7.x/Home)
 * [Angular: 7.x.x](https://angular.io/)
 * [Angular CLI: 7.1.4](https://cli.angular.io/)
 
