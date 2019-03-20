@@ -16,7 +16,8 @@ object FrontendRunHook {
       var process: Option[Process] = None
 
       /**
-        * Change these commands if you want to use Yarn.
+        * Change the commands in `FrontendCommands.scala` if you want to use Yarn.
+        * No extra change here is needed. E.g., don't change `npmInstall` to `yarnInstall`.
         */
       var npmInstall: String = FrontendCommands.dependencyInstall
       var npmRun: String = FrontendCommands.serve
