@@ -39,7 +39,7 @@ object FrontendRunHook {
         * Executed after play run start.
         * Run npm start
         */
-      override def afterStarted(): Unit = {
+      override def afterStarted(addr: InetSocketAddress): Unit = {
         process = Option(
           Process(run, base / "ui").run
         )
