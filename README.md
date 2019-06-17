@@ -10,16 +10,16 @@ Read more @ http://bit.ly/2AStvhK
 
 ## Used Summary
 
-* [Play Framework: 2.7.0](https://www.playframework.com/documentation/2.7.x/Home)
-* [Angular: 7.x.x](https://angular.io/)
-* [Angular CLI: 7.1.4](https://cli.angular.io/)
+* [Play Framework: 2.7.2](https://www.playframework.com/documentation/2.7.x/Home)
+* [Angular: 8.x.x](https://angular.io/)
+* [Angular CLI: 8.0.3](https://cli.angular.io/)
 
 ## How to use it?
 
 ### Prerequisites
 
-* [Node.js](https://nodejs.org/)
-* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Node.js](https://nodejs.org/) (version 10 or higher)
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (recommend version 1.8 or higher)
 * [scala](https://www.scala-lang.org/download/)
 
 ### Let's get started,
