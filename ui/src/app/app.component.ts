@@ -8,8 +8,8 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string;
-  postRequestResponse: string;
+  title: string | undefined;
+  postRequestResponse: string | undefined;
 
   constructor(private appService: AppService) {
     this.appService.getWelcomeMessage().subscribe((data: any) => {

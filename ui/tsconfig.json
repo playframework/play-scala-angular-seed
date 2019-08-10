@@ -19,6 +19,7 @@
       "es2018",
       "dom"
     ],
-    "incremental": true
+    "incremental": true,
+    "strict": true
   }
 }
