@@ -21,12 +21,9 @@ val isWindows = System.getProperty("os.name").toLowerCase().contains("win")
 def runOnCommandline(script: String)(implicit dir: File): Int = {
   if(isWindows){ Process("cmd /c " + script, dir) } else { Process(script, dir) } }!
 
-// Check of node_modules directory exist in given directory.
-def isNodeModulesInstalled(implicit dir: File): Boolean = (dir / "node_modules").exists()
-
 // Execute `npm install` command to install all node module dependencies. Return Success if already installed.
 def runNpmInstall(implicit dir: File): Int =
-  if (isNodeModulesInstalled) Success else runOnCommandline(FrontendCommands.dependencyInstall)
+  runOnCommandline(FrontendCommands.dependencyInstall)
 
 // Execute task if node modules are installed, else return Error status.
 def ifNodeModulesInstalled(task: => Int)(implicit dir: File): Int =

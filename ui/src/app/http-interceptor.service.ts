@@ -43,7 +43,7 @@ export class AppHttpInterceptorService implements HttpInterceptor {
     }
   }
 
-  private handleClientSideError(status: number): string {
+  private handleClientSideError(status: number): string | undefined {
     switch (status) {
       case 0:
         return 'NO INTERNET CONNECTION';
