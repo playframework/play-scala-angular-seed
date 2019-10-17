@@ -12,7 +12,7 @@ Read more @ http://bit.ly/2AStvhK
 
 * [Play Framework: 2.7.2](https://www.playframework.com/documentation/2.7.x/Home)
 * [Angular: 8.x.x](https://angular.io/)
-* [Angular CLI: 8.0.3](https://cli.angular.io/)
+* [Angular CLI: 8.3.9](https://cli.angular.io/)
 
 ## How to use it?
 
