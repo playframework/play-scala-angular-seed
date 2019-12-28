@@ -3,7 +3,7 @@ name := """scala-play-angular-seed"""
 version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala).settings(
-  watchSources ++= (baseDirectory.value / "public/ui" ** "*").get
+  watchSources ++= (baseDirectory.value / "ui/src" ** "*").get
 )
 
 resolvers += Resolver.sonatypeRepo("snapshots")
