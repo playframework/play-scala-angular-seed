@@ -10,9 +10,9 @@ Read more @ http://bit.ly/2AStvhK
 
 ## Used Summary
 
-* [Play Framework: 2.8.0](https://www.playframework.com/documentation/2.8.x/Home)
-* [Angular: 8.x.x](https://angular.io/)
-* [Angular CLI: 8.3.9](https://cli.angular.io/)
+* [Play Framework: 2.8.13](https://www.playframework.com/documentation/2.8.x/Home)
+* [Angular: 13.3.2](https://angular.io/)
+* [Angular CLI: 13.3.2](https://cli.angular.io/)
 
 ## How to use it?
 
@@ -20,7 +20,7 @@ Read more @ http://bit.ly/2AStvhK
 
 * [Node.js](https://nodejs.org/) (version 10 or higher)
 * [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (recommend version 1.8 or higher)
-* [scala](https://www.scala-lang.org/download/)
+* [scala: 2.13](https://www.scala-lang.org/download/)
 
 ### Let's get started,
 
