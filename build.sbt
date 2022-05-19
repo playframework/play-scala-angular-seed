@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala).settings(
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
-scalaVersion := "2.12.15"
+scalaVersion := "2.13.8"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
