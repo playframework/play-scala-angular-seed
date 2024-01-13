@@ -11,5 +11,5 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 scalaVersion := "2.13.12"
 
 libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.0" % Test
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test
 libraryDependencies += "com.h2database" % "h2" % "2.2.224"
