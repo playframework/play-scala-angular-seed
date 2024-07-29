@@ -12,4 +12,4 @@ scalaVersion := "2.13.14"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test
-libraryDependencies += "com.h2database" % "h2" % "2.2.224"
+libraryDependencies += "com.h2database" % "h2" % "2.3.230"
